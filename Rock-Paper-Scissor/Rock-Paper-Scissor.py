@@ -18,7 +18,7 @@ while True:
          user_action = int(input("Enter a valid action: ")) 
 
    
-
+#user choice
     if user_action == 1:
         choice_name = 'Rock'
     elif user_action == 2:
@@ -28,11 +28,13 @@ while True:
 
     print ("Your Choice is : ", choice_name)
 
+
     computer_choice = random.randint(1,3)
 
     while computer_choice == user_action:
         computer_choice = random.randint(1, 3)
 
+#computer's choice
     if computer_choice == 1:
         comp_choice_name = 'RocK'
     elif computer_choice == 2:
@@ -42,10 +44,12 @@ while True:
 
     print("Computer's Choice is :", comp_choice_name)
 
+#checking for draw
     if user_action == computer_choice:
         print('Its a Draw', end="")
         result = "DRAW"
 
+#Condition to win
     if (user_action == 1) and (computer_choice == 2):
         print("Paper covers rock! You lose.")
     elif (user_action == 2) and (computer_choice == 1):
@@ -61,12 +65,14 @@ while True:
     elif (user_action == 3) and (computer_choice == 2):
         print("Scissors cuts paper! You win!")
 
-    
+#playing another round
     print("Do you want to play again? (Y/N)")
     
     ans = input().lower()
     if ans == 'n':
         break
 
+
+#greeting at the end
 print("Thank you for Playing")
         
