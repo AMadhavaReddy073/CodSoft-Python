@@ -5,9 +5,6 @@ print('Winning rules of the game ROCK PAPER SCISSORS are :\n'
       + "Rock vs Scissors -> Rock wins \n"
       + "Paper vs Scissors -> Scissor wins \n")
 
-
-
-
 while True:
 
     print("Please enter your choice: \n 1)Rock \n 2)Paper \n 3)Scissor ")
@@ -18,7 +15,7 @@ while True:
          user_action = int(input("Enter a valid action: ")) 
 
    
-#user choice
+    #user choice
     if user_action == 1:
         choice_name = 'Rock'
     elif user_action == 2:
@@ -34,7 +31,7 @@ while True:
     while computer_choice == user_action:
         computer_choice = random.randint(1, 3)
 
-#computer's choice
+    #computer's choice
     if computer_choice == 1:
         comp_choice_name = 'RocK'
     elif computer_choice == 2:
@@ -44,12 +41,12 @@ while True:
 
     print("Computer's Choice is :", comp_choice_name)
 
-#checking for draw
+    #checking for draw
     if user_action == computer_choice:
         print('Its a Draw', end="")
         result = "DRAW"
 
-#Condition to win
+    #Condition to win
     if (user_action == 1) and (computer_choice == 2):
         print("Paper covers rock! You lose.")
     elif (user_action == 2) and (computer_choice == 1):
@@ -65,7 +62,7 @@ while True:
     elif (user_action == 3) and (computer_choice == 2):
         print("Scissors cuts paper! You win!")
 
-#playing another round
+    #playing another round
     print("Do you want to play again? (Y/N)")
     
     ans = input().lower()
